@@ -40,7 +40,7 @@ class FacebookUser(db.Model):
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/create')
 def create_form():
     return render_template('form.html')
 
