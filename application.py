@@ -45,6 +45,14 @@ def create_form():
     return render_template('form.html')
 
 
+@app.route('/save')
+def submit_form():
+    try:
+        pass
+    except:
+        return 'failed'
+    return 'success'
+
 @app.route('/edit')
 def configure():
     d = {
