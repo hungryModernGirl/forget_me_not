@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from facepy import GraphAPI
 
@@ -39,9 +39,10 @@ class FacebookUser(db.Model):
 
 app = Flask(__name__)
 
-@app.route('/join')
-def create_():
-    return 'Hello World!'
+
+@app.route('/')
+def create_form():
+    return render_template('form.html')
 
 
 @app.route('/edit')
